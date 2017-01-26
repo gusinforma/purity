@@ -109,7 +109,7 @@ prompt_purity_setup() {
 	ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{cyan}✩%f "
 
 	# prompt turns red if the previous command didn't exit with 0
-	PROMPT='%(?.%F{green}.%F{red})❯%f %F{blue}%c$(git_prompt_info)$(git_prompt_status)f '
+	PROMPT='%(?.%F{green}.%F{red})❯%f %F{blue}%c$(git_prompt_info)$(git_prompt_status)%f '
 	RPROMPT='%F{red}%(?..⏎)%f '
 }
 
