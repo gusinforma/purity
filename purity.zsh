@@ -71,7 +71,7 @@ prompt_purity_precmd() {
 		command git rev-parse --abbrev-ref @'{u}' &>/dev/null &&
 		(( $(command git rev-list --right-only --count HEAD...@'{u}' 2>/dev/null) > 0 )) &&
 		# some crazy ansi magic to inject the symbol into the previous line
-		print -Pn "\e7\e[0G\e[`prompt_purity_string_length $prompt_purity_preprompt`C%F{cyan}⇣%f\e8"
+		print -Pn "\e8\e[0G\e[`prompt_purity_string_length $prompt_purity_preprompt`C%F{cyan}⇣%f\e8"
 	} &!
 
 	# reset value since `preexec` isn't always triggered
@@ -109,7 +109,7 @@ prompt_purity_setup() {
 	ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{cyan}✩%f "
 
 	# prompt turns red if the previous command didn't exit with 0
-	PROMPT='%(?.%F{green}.%F{red})→ %F{blue}%c $(git_prompt_status) $(git_prompt_info) '
+	PROMPT='%(?.%F{green}.%F{red})→ %F{blue}%c$(git_prompt_info) $(git_prompt_status)%f '
 	RPROMPT='%F{red}%(?..⏎)%f'
 }
 
