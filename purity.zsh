@@ -101,12 +101,12 @@ prompt_purity_setup() {
 	ZSH_THEME_GIT_PROMPT_DIRTY=""
 	ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-	ZSH_THEME_GIT_PROMPT_ADDED="%F{green}✓%f "
-	ZSH_THEME_GIT_PROMPT_MODIFIED="%F{blue}✶%f "
-	ZSH_THEME_GIT_PROMPT_DELETED="%F{red}✗%f "
-	ZSH_THEME_GIT_PROMPT_RENAMED="%F{magenta}➜%f "
-	ZSH_THEME_GIT_PROMPT_UNMERGED="%F{yellow}═%f "
-	ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{cyan}✩%f "
+	ZSH_THEME_GIT_PROMPT_ADDED="%F{green}✓%f"
+	ZSH_THEME_GIT_PROMPT_MODIFIED="%F{blue}✶%f"
+	ZSH_THEME_GIT_PROMPT_DELETED="%F{red}✗%f"
+	ZSH_THEME_GIT_PROMPT_RENAMED="%F{magenta}➜%f"
+	ZSH_THEME_GIT_PROMPT_UNMERGED="%F{yellow}═%f"
+	ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{cyan}✩%f"
 
 	# prompt turns red if the previous command didn't exit with 0
 	PROMPT='%(?.%F{green}.%F{red})→ %F{blue}%c$(git_prompt_info) $(git_prompt_status)%F{blue}: '
