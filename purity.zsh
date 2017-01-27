@@ -96,7 +96,7 @@ prompt_purity_setup() {
 	# show username@host if logged in through SSH
 	[[ "$SSH_CONNECTION" != '' ]] && prompt_purity_username='%n@%m '
 
-	ZSH_THEME_GIT_PROMPT_PREFIX=" %F{cyan}%f%F{yellow}"
+	ZSH_THEME_GIT_PROMPT_PREFIX=" %F{cyan}%f%F{yellow} "
 	ZSH_THEME_GIT_PROMPT_SUFFIX="%b"
 	ZSH_THEME_GIT_PROMPT_DIRTY=""
 	ZSH_THEME_GIT_PROMPT_CLEAN=""
